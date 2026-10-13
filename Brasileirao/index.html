@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore os campeões e as classificações históricas do Campeonato Brasileiro.">
+    <title>História do Brasileirão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <span class="subtitulo">A HISTÓRIA DO FUTEBOL BRASILEIRO</span>
+            <h1>🏆 História do Brasileirão</h1>
+            <p>Campeões, classificações e estatísticas do campeonato</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="painel">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">TEMPORADA</span>
+                    <h2>📊 Classificação</h2>
+                </div>
+                <div class="controle-ano">
+                    <label for="ano">Escolha o ano:</label>
+                    <select id="ano">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="resumo">
+                <article class="cartao-resumo">
+                    <span>🏆 Campeão da temporada</span>
+                    <strong id="nomeCampeao">Carregando...</strong>
+                    <small id="anoCampeao">Temporada selecionada</small>
+                </article>
+                <article class="cartao-resumo">
+                    <span>⭐ Pontos do líder</span>
+                    <strong id="pontosCampeao">—</strong>
+                    <small>Conforme os dados cadastrados</small>
+                </article>
+                <article class="cartao-resumo">
+                    <span>⚽ Clubes exibidos</span>
+                    <strong id="totalClubes">—</strong>
+                    <small>Registros nesta tabela</small>
+                </article>
+            </div>
+
+            <label class="rotulo-pesquisa" for="pesquisaClube">🔎 Pesquisar clube</label>
+            <input
+                type="search"
+                id="pesquisaClube"
+                placeholder="Digite o nome de um clube..."
+                autocomplete="off"
+            >
+
+            <p id="mensagemTabela" class="mensagem" aria-live="polite"></p>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Clube</th>
+                            <th>PTS</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>E</th>
+                            <th>D</th>
+                            <th>SG</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaClassificacao"></tbody>
+                </table>
+            </div>
+            <p class="legenda">PTS: pontos · J: jogos · V: vitórias · E: empates · D: derrotas · SG: saldo de gols.</p>
+        </section>
+
+        <section class="painel">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">MEMÓRIA DO CAMPEONATO</span>
+                    <h2>🏆 Campeões do Brasileirão</h2>
+                </div>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Campeão</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaCampeoes"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>História do Brasileirão · Projeto educativo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

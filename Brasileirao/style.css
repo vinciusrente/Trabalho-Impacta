@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro: #063d2b;
+    --verde: #087443;
+    --verde-claro: #eaf5ee;
+    --dourado: #e5b84b;
+    --fundo: #f3f6f4;
+    --texto: #202b25;
+    --borda: #e0e7e2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.topo {
+    background: linear-gradient(130deg, #042f22, #087443);
+    color: white;
+    padding: 48px 20px;
+    border-bottom: 5px solid var(--dourado);
+}
+
+.topo-conteudo {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.subtitulo,
+.etiqueta {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    color: #e5c76d;
+    margin-bottom: 10px;
+}
+
+.topo h1 {
+    font-size: clamp(27px, 5vw, 42px);
+    margin-bottom: 10px;
+}
+
+.topo p {
+    color: #e2eee7;
+}
+
+main {
+    width: min(1100px, 94%);
+    margin: 30px auto;
+}
+
+.painel {
+    background: white;
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(12, 48, 30, 0.06);
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.etiqueta {
+    color: var(--verde);
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--verde-escuro);
+    font-size: 25px;
+}
+
+.controle-ano {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+select,
+input[type="search"] {
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd8cf;
+    border-radius: 8px;
+    background: white;
+    color: var(--texto);
+    font-size: 15px;
+}
+
+select:focus,
+input:focus {
+    outline: 2px solid var(--verde);
+    outline-offset: 2px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.cartao-resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px;
+    background: var(--verde-claro);
+    border: 1px solid #d9eadf;
+    border-top: 4px solid var(--verde);
+    border-radius: 12px;
+}
+
+.cartao-resumo:first-child {
+    border-top-color: var(--dourado);
+}
+
+.cartao-resumo span {
+    color: #4a5b50;
+    font-size: 13px;
+}
+
+.cartao-resumo strong {
+    color: var(--verde-escuro);
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+.cartao-resumo small {
+    color: #647168;
+}
+
+.rotulo-pesquisa {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#pesquisaClube {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.mensagem {
+    color: #56665c;
+    font-size: 13px;
+    margin: 5px 0 12px;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th {
+    padding: 14px 12px;
+    background: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+td {
+    padding: 13px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--borda);
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7faf8;
+}
+
+tbody tr:hover {
+    background: #eaf5ee;
+}
+
+td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+}
+
+tr.lider {
+    background: #fff5d8 !important;
+}
+
+tr.lider td:first-child {
+    color: #8a6200;
+    font-weight: bold;
+}
+
+tr.g4 td:first-child {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.legenda {
+    margin-top: 12px;
+    color: #68766d;
+    font-size: 12px;
+}
+
+footer {
+    padding: 24px 15px;
+    text-align: center;
+    background: var(--verde-escuro);
+    color: #e2eee7;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .topo {
+        padding: 35px 15px;
+    }
+
+    main {
+        width: 95%;
+        margin: 18px auto;
+    }
+
+    .painel {
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .titulo-secao {
+        align-items: flex-start;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-resumo {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
